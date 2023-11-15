@@ -22,4 +22,4 @@ RUN rake db:create
 RUN rake db:migrate
 RUN rake assets:precompile
 EXPOSE 3000
-CMD ["sh", "-c", "RAILS_ENV=production bundle exec rails s"]
+CMD ["bash", "-c", "RAILS_ENV=production bundle exec rails s"]
