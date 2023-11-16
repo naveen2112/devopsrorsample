@@ -12,7 +12,6 @@ WORKDIR /var/www/
 RUN git clone https://github.com/naveen2112/devopsrorsample.git 
 WORKDIR /var/www/devopsrorsample
 RUN bundle install
-RUN export SECRET_KEY_BASE=$(bundle exec rake secret) && echo "export SECRET_KEY_BASE=$SECRET_KEY_BASE" >> ~/.bashrc
 ENV RAILS_ENV=production \
 DB_NAME=postgres \
 DB_USERNAME=postgres \
